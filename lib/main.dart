@@ -14,7 +14,9 @@ class NotesApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
       home: const Scaffold(
-        body: NotesView(),
+        body: SafeArea(
+          child: NotesView(),
+        ),
       ),
     );
   }
