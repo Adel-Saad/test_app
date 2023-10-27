@@ -11,7 +11,10 @@ class NoteEditViewBody extends StatelessWidget {
       padding: EdgeInsets.all(16.0),
       child: Column(
         children: [
-          CustomAppBar(),
+          CustomAppBar(
+            icon: Icon(Icons.done),
+            text: 'Edit Note',
+          ),
           CustomTextField(title: 'title'),
           CustomTextField(title: 'Content', maxlines: 5),
         ],

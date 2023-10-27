@@ -2,15 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:test_app/views/home/widgets/custom_icon_button.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key});
+  final Widget icon;
+  final String text;
+  const CustomAppBar({super.key, required this.icon, required this.text});
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text('Notes', style: TextStyle(fontSize: 22)),
-        CustomIconButton()
+        Text(text, style: const TextStyle(fontSize: 22)),
+        CustomIconButton(
+          icon: icon,
+        )
       ],
     );
   }
